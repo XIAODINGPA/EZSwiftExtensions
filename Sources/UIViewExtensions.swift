@@ -12,7 +12,7 @@ import UIKit
 
 // MARK: Custom UIView Initilizers
 extension UIView {
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, convenience contructor to define a view based on width, height and base coordinates.
     public convenience init(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat) {
         self.init(frame: CGRect(x: x, y: y, width: w, height: h))
     }
@@ -69,21 +69,21 @@ extension UIView {
         frame = CGRect(x: x, y: y, width: width, height: height)
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, resizes this view so as to fit its width.
     public func resizeToFitWidth() {
         let currentHeight = self.h
         self.sizeToFit()
         self.h = currentHeight
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, resizes this view so as to fit its height.
     public func resizeToFitHeight() {
         let currentWidth = self.w
         self.sizeToFit()
         self.w = currentWidth
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the x coordinate of the frame's origin for the view.
     public var x: CGFloat {
         get {
             return self.frame.origin.x
@@ -92,7 +92,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the y coordinate of the frame's origin for the view.
     public var y: CGFloat {
         get {
             return self.frame.origin.y
@@ -101,7 +101,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, variable to get the width of the view.
     public var w: CGFloat {
         get {
             return self.frame.size.width
@@ -110,7 +110,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, variable to get the height of the view.
     public var h: CGFloat {
         get {
             return self.frame.size.height
@@ -119,7 +119,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the x coordinate of leftmost edge of the view.
     public var left: CGFloat {
         get {
             return self.x
@@ -128,7 +128,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the x coordinate of the rightmost edge of the view.
     public var right: CGFloat {
         get {
             return self.x + self.w
@@ -137,7 +137,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the y coordinate for the topmost edge of the view.
     public var top: CGFloat {
         get {
             return self.y
@@ -146,7 +146,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the y coordinate of the bottom most edge of the view.
     public var bottom: CGFloat {
         get {
             return self.y + self.h
@@ -155,7 +155,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter the frame's origin point of the view.
     public var origin: CGPoint {
         get {
             return self.frame.origin
@@ -164,7 +164,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the X coordinate of the center of a view.
     public var centerX: CGFloat {
         get {
             return self.center.x
@@ -173,7 +173,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for the Y coordinate for the center of a view.
     public var centerY: CGFloat {
         get {
             return self.center.y
@@ -182,7 +182,7 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter and setter for frame size for the view.
     public var size: CGSize {
         get {
             return self.frame.size
@@ -191,28 +191,28 @@ extension UIView {
         }
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter for an leftwards offset position from the leftmost edge.
     public func leftOffset(_ offset: CGFloat) -> CGFloat {
         return self.left - offset
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, getter for an rightwards offset position from the rightmost edge.
     public func rightOffset(_ offset: CGFloat) -> CGFloat {
         return self.right + offset
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, aligns the view to the top by a given offset.
     public func topOffset(_ offset: CGFloat) -> CGFloat {
         return self.top - offset
     }
 
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, align the view to the bottom by a given offset.
     public func bottomOffset(_ offset: CGFloat) -> CGFloat {
         return self.bottom + offset
     }
 
     //TODO: Add to readme
-    /// EZSwiftExtensions
+    /// EZSwiftExtensions, align the view widthwise to the right by a given offset.
     public func alignRight(_ offset: CGFloat) -> CGFloat {
         return self.w - offset
     }
